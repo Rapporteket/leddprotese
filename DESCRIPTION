@@ -23,7 +23,6 @@ Imports:
     ggplot2,
     kableExtra,
     knitr,
-    magrittr,
     rapbase,
     rlang,
     rpivotTable,
