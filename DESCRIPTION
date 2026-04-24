@@ -29,7 +29,7 @@ Imports:
     shiny,
     shinyalert
 Remotes:
-  Rapporteket/rapbase@main
+  Rapporteket/rapbase
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
