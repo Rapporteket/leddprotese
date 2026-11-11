@@ -1,0 +1,17 @@
+name: Publish Docker image to Docker Hub
+on:
+  release:
+    types: [published]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 21 * * 6' # run every Saturday at 21
+
+jobs:
+  push_to_registries:
+    uses: rapporteket/.github/.github/workflows/docker.yml@v1
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
